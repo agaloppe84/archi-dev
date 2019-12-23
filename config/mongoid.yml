@@ -1,0 +1,33 @@
+development:
+  clients:
+    default:
+      database: archi_dev_db
+      hosts:
+        - localhost:27017
+      options:
+        retry_writes: false
+        connect_timeout: 15
+        wait_queue_timeout: 15
+  options:
+    raise_not_found_error: false
+test:
+  clients:
+    default:
+      database: archi_dev_db
+      hosts:
+        - localhost:27017
+      options:
+        raise_not_found_error: false
+        read:
+          mode: :primary
+        max_pool_size: 1
+production:
+  options:
+    raise_not_found_error: false
+  clients:
+    default:
+      options:
+        raise_not_found_error: false
+        retry_writes: false
+        connect_timeout: 15
+        wait_queue_timeout: 15
