@@ -1,9 +1,7 @@
 development:
   clients:
     default:
-      database: archi_dev_db
-      hosts:
-        - localhost:27017
+      uri: "mongodb://heroku_2b4zpfgb:dq61u1nu20tehva26vchrohn1v@ds257668.mlab.com:57668/heroku_2b4zpfgb"
       options:
         retry_writes: false
         connect_timeout: 15
@@ -26,6 +24,7 @@ production:
     raise_not_found_error: false
   clients:
     default:
+      uri: "mongodb://heroku_2b4zpfgb:dq61u1nu20tehva26vchrohn1v@ds257668.mlab.com:57668/heroku_2b4zpfgb"
       options:
         raise_not_found_error: false
         retry_writes: false
